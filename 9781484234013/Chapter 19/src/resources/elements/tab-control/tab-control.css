@@ -1,0 +1,39 @@
+tab-control {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: relative;
+}
+tab-control #tab-header,
+tab-control #tab-content {
+  position: relative;
+}
+tab-control #tab-header {
+  border-radius: 5px 5px 0 0;
+  line-height: 2.2em;
+}
+tab-control #tab-header>span {
+  position: relative;
+  background: #293846;
+  background: lightgray;
+  color: darkgray;
+  border-radius: 5px 5px 0 0;
+  padding: .5em;
+
+  cursor: pointer;
+  user-select: none;
+}
+tab-control #tab-header>span.active {
+  background: #CC412F;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+tab-control #tab-header>span:hover {
+  filter: brightness(65%);
+}
+tab-control #tab-content {
+  margin: 0;
+}
+tab-item {
+  position: relative;
+}

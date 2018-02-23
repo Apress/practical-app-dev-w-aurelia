@@ -1,0 +1,57 @@
+.page-host {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.router section {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.page1 {
+  background-color: lightskyblue;
+}
+.page2 {
+  background-color: limegreen;
+}
+
+.users {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: lightgray;
+}
+.users .user {
+  display: flex;
+  flex-flow: column;
+  flex: none;      
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  height: 200px;
+  width: 185px;
+  padding: 10px;
+  margin: 15px;
+  box-shadow: 5px 5px 5px black;
+}
+.users .user img {
+  flex: none;
+  height: 150px;
+  width: 150px;
+}
+.users .user span {
+  flex: none;
+  font-size: large;
+}
+
+.dynamic-form textarea {
+  width: 100%;
+  height: calc(100vh - 150px);
+}

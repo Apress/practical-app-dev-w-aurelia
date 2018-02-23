@@ -1,0 +1,17 @@
+html, body, .holy-grail, main, article { height: 100%; width: 100%; }
+.holy-grail, header, main, sidebar, article { display: flex; }
+header, sidebar, article { padding: 10px; }
+
+ul {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+  padding-left: 5px;
+}
+li.active { font-weight: bold; }
+a { display: inline-block; text-decoration: none; }
+.holy-grail { flex-direction: column; }
+.holy-grail main { flex-direction: row; }
+.holy-grail header { background-color: black; color: white; }
+.holy-grail sidebar { flex: 0 0 200px; background-color: orange; }
+.holy-grail article { flex: 1; background-color: darkgray; }

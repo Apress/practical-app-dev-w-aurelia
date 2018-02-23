@@ -1,0 +1,10 @@
+<template>
+  <require from="./app.css"></require>
+  
+  <h1>${message}</h1>
+  <a repeat.for="row of router.navigation"
+    class="${row.isActive ? 'active' : ''}"
+    href.bind="row.href" style="margin-left: 10px;">${row.title}</a>
+
+  <router-view></router-view>
+</template>

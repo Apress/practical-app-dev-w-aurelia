@@ -1,0 +1,22 @@
+<template>
+  <require from="./app.css"></require>
+
+  <div class="holy-grail">  
+  <header>
+    ${viewTitle}
+  </header>  
+  <main>  
+    <sidebar>
+      <ul>
+        <li repeat.for="row of router.navigation"
+          class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+    </sidebar>  
+    <article>
+      <router-view></router-view>
+    </article>  
+  </main>  
+</div>
+</template>

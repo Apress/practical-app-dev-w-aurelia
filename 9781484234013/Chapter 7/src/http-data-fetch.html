@@ -1,0 +1,11 @@
+<template>
+  <require from="./styles.css"></require>
+
+  <div class="users"> 
+    <div class="user" repeat.for="user of users"> 
+      <img src.bind="user.picture.medium"> 
+      <span>${user.name.first} ${user.name.last}
+      </span> 
+    </div>
+  </div>
+</template>

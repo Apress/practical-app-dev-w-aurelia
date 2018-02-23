@@ -1,0 +1,10 @@
+<template>
+  <h1>Page 2</h1>
+  <form>
+    <div class="form-group">
+      <label for="flavor">What's your favorite ice cream?</label>
+      <multi-selector name="flavor" instance-options.bind="iceCreamList" selected-options.bind="selectedIceCream" placeholder="Select flavor...">
+      </multi-selector>
+    </div>
+  </form>
+</template>

@@ -1,0 +1,19 @@
+<template>
+  <require from="./app.css"></require>
+  
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div class="child-router col-md-12">
+      <div class="col-md-2">
+        <ul class="well nav nav-pills nav-stacked">
+          <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+            <a href.bind="row.href">${row.title}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10" style="padding: 0">
+        <router-view></router-view>
+      </div>
+    </div>
+  </section>
+</template>

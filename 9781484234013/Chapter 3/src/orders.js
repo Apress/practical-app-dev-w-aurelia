@@ -1,0 +1,6 @@
+export class Orders {
+
+  constructor() {
+
+  }
+}

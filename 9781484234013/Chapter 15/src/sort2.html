@@ -1,0 +1,23 @@
+<template>
+  <require from="./sort.css"></require>
+  <require from="./resources/value-converters/sort-value-converter"></require>
+
+  <h4>Sorting will not work using this approach</h4>
+  <p>
+    Aurelia will lose track of changes ont he columnName and direction properties as they are now copies.
+  </p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th click.delegate="sortBy('company')">Company</th>
+        <th click.delegate="sortBy('country')">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr repeat.for="row of rows | sort: {propertyName: columnName, direction: direction}">
+        <td>${row.company}</td>
+        <td>${row.country}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>

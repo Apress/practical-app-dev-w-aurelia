@@ -1,0 +1,10 @@
+form.customer fieldset {
+  border-color: transparent;
+}
+form.customer label {
+  font-weight: bold;
+}
+form.customer input {
+  width: 100%;
+  margin-top: 5px;
+}

@@ -1,0 +1,4 @@
+
+.table thead tr th {
+  user-select: none;
+}

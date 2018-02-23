@@ -1,0 +1,16 @@
+<template>
+  <div class="dynamic-form">
+    <div class="col-sm-6">
+      <h3>Dynamic Forms</h3>
+      <textarea value.bind="viewTemplate">
+      </textarea>
+      <button class="btn btn-success"
+        click.delegate="update()">Enhance</button>
+    </div>
+    <div class="col-sm-6">
+      <h3>Preview</h1>
+      <div id="dynamicHost" innerhtml.bind="viewTemplate">
+      </div>
+    </div>
+  </div>
+</template>

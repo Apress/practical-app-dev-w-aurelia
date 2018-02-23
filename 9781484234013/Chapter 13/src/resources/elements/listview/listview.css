@@ -1,0 +1,102 @@
+:root {
+  --delay: 1s;
+}
+.listview {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "listview-buttons"
+    "listview-content";
+  overflow: auto;
+}
+.listview .listview-buttons {
+  grid-area: listview-buttons;
+}
+.listview .listview-content {
+  grid-area: listview-content;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 0 0 auto;
+  height: 100px;
+  width: 200px;
+  background: black;
+  color: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.small-card {
+  flex: 0 0 auto;
+  /*height: 75px;*/
+  height: 55px;
+  /*width: 100px;*/
+  width: 80px;
+  background: black;
+  color: white;
+  /*margin: 20px;*/
+  margin: 15px;
+  /*padding: 15px;*/
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listview-item-selected {
+  background: #e6e6e6;
+}
+.listview .listview-buttons button:focus,
+.listview-item-selected:focus,
+.listview-item-selected:active:focus {
+  border-color: #ccc;
+  outline: none;
+  outline-color: transparent;
+}
+.listview-item-hidden {
+  opacity: 0;  
+}
+.listview-item-visible {
+  opacity: 1;
+  -webkit-animation: listviewFadeIn var(--delay);
+  animation: listviewFadeIn var(--delay);  
+}
+
+.view-hidden {
+  opacity: 0;
+  -webkit-animation: listviewFadeOut var(--delay);
+  animation: listviewFadeOut var(--delay);
+}
+
+/* CSS3-Animations */
+@-webkit-keyframes listviewFadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes listviewFadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes listviewFadeOut {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes listviewFadeOut {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}    

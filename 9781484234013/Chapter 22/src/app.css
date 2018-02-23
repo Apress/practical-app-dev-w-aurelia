@@ -1,0 +1,9 @@
+
+section {
+  padding: 20px;
+}
+
+ux-dialog-overlay.active {
+  background-color: #000;
+  opacity: .5;
+}

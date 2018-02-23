@@ -1,0 +1,38 @@
+<template>
+  <require from="./app.css"></require>
+
+  <section class="page-section">
+    <h1>${message}</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">
+          Name
+        </label>
+        <input id="name"
+          type="text"
+          value.bind="currentRecord.name"
+          set-focus>
+      </div>
+      <div class="form-group">
+        <label for="phone">
+          Phone Number
+        </label>
+        <input id="phone"
+          type="text"
+          value.bind="currentRecord.phone"
+          input-mask="pattern: (###) ###-####;"
+          placeholder="(555) 555-1234">
+      </div>
+      <div class="form-group">
+        <label for="color">
+          Color
+        </label>
+        <input id="color"
+          type="text"
+          value.bind="currentRecord.color">
+        <div circle.bind="currentRecord.color">
+        </div>
+      </div>
+    </form>
+  </section>
+</template>

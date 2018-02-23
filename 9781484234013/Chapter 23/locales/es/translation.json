@@ -1,0 +1,12 @@
+{
+  "header": {
+    "title": "Bienvenido"
+  },
+  "title": "Traducciones en Aurelia",
+  "score": "Puntos: {{score}}",
+  "lives": "{{count}} vida disponible",
+  "lives_plural": "{{count}} vidas disponibles",
+  "friend": "Un amigo",
+  "friend_male": "Un novio",
+  "friend_female": "Una novia"
+}

@@ -1,0 +1,15 @@
+<template>
+  <h1>Page 3</h1>
+  <tab-control
+    selection-changed.delegate="tabSelectionChanged($event.detail)" 
+    selected-tab="tab1">  
+    <tab-item name="tab1" 
+      header="Tab 1">
+      <h2>Tab 1 contents....</h2>
+    </tab-item>  
+    <tab-item name="tab2" 
+      header="Tab 2">
+      <h2>Tab 2 contents....</h2>
+    </tab-item>  
+  </tab-control>
+</template>

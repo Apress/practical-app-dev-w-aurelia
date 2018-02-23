@@ -1,0 +1,8 @@
+<template>
+  <require from="./resources/binding-behaviors/stop-propagation"></require>
+  <require from="./binding-behavior-view.css"></require>
+
+  <div click.delegate="divClick($event)">
+    <button click.delegate="buttonClick($event) & stopPropagation">Click Me!</button>
+  </div>
+</template>

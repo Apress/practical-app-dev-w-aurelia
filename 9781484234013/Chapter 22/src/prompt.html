@@ -1,0 +1,12 @@
+<template>
+  <ux-dialog>
+    <ux-dialog-header>${model.header}</ux-dialog-header>
+    <ux-dialog-body>
+      ${model.prompt}
+    </ux-dialog-body>
+    <ux-dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok(true)">OK</button>
+    </ux-dialog-footer>
+  </ux-dialog>
+</template>

@@ -1,0 +1,19 @@
+<template>
+  <require from='./listview.css'></require>
+
+  <div class="listview">
+
+    <div class="listview-buttons btn-group" role="group" aria-label="view selectors">
+      <button class="btn btn-default ${selectedView === item.name ? 'listview-item-selected' : ''}" 
+        repeat.for="item of items"
+        click.delegate="selectedView = item.name">
+        <i class="fa fa-${item.iconClass}"></i>
+        <span class="margin-left-10">${item.header}</span>
+      </button>
+    </div>
+    
+    <div class="listview-content" id="view-content">
+      <slot></slot>
+    </div>
+  </div>  
+</template>

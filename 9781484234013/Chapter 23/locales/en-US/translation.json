@@ -1,0 +1,12 @@
+{
+  "header": {
+    "title": "Welcome"
+  },
+  "title": "Translations in Aurelia",
+  "score": "Score: {{score}}",
+  "lives": "{{count}} life remaining",
+  "lives_plural": "{{count}} lives remaining",
+  "friend": "A friend",
+  "friend_male": "A boyfriend",
+  "friend_female": "A girlfriend"
+}

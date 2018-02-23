@@ -1,0 +1,25 @@
+<template>
+  <require from="./app.css"></require>
+  <section>
+    <h3 t="title">Title</h3>
+    <!-- <h3 i18n="header.title">Title</h3> -->
+    <p>
+      Translation with Variables: <br />
+      ${ 'score' | t: {'score': 13}}
+    </p>
+    <p>
+      Translation singular: <br />
+      ${ 'lives' | t: { 'count': 1 } }
+    </p>
+    <p>
+      Translation plural: <br />
+      ${ 'lives' | t: { 'count': 2 } }
+    </p>
+    <p>
+      Translation without/with context: <br />
+      ${ 'friend' | t } <br />
+      ${ 'friend' | t: { context: 'male' } } <br />
+      ${ 'friend' | t: { context: 'female' } }
+    </p>
+	</section>
+</template>

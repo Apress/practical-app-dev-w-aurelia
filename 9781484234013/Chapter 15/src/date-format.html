@@ -1,0 +1,18 @@
+<template>
+  <require from="./resources/value-converters/date-format-value-converter"></require>
+
+  last modified ${modifiedDateTime | dateFormat:'MMMM D, YYYY'}
+
+  <br/>
+  
+  <label for="dateSelect">Select format:</label>
+  <select id="dateSelect" ref="dateSelect">
+    <option value="MM-DD-YY">MM-DD-YY</option>
+    <option value="MM/DD/YY">MM/DD/YY</option>
+    <option value="MM-DD-YYYY">MM-DD-YYYY</option>
+    <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+  </select>
+
+  last modified ${modifiedDateTime | dateFormat:dateSelect.value}
+  
+</template>

@@ -1,0 +1,15 @@
+<template>
+  <require from="./tab-control.css"></require>
+  
+  <div id="tab-header">
+    <span repeat.for="tab of tabs"
+      click.delegate="navClick($event)"
+      class="${selectedTab === tab.name ? 'active' : ''}"
+      id="${tab.name}">
+      ${tab.header}
+    </span>
+  </div>
+  <div id="tab-content" class="grid" style="min-height: 0;">
+    <slot></slot>
+  </div>
+</template>

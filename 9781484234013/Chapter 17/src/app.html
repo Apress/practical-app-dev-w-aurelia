@@ -1,0 +1,12 @@
+<template>
+  <require from="./app.css"></require>
+  
+  <h1>${message}</h1>
+
+  <button click.delegate="toggleView()">
+    Toggle View
+  </button>
+  <compose view.bind="currentView" 
+    view-model="./customer">
+    </compose>
+</template>

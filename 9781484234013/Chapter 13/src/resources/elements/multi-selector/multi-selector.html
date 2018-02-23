@@ -1,0 +1,28 @@
+<template>
+  <require from="./multi-selector.css"></require>
+  <require from='./multi-selector-item'></require>
+
+  <div class="multi-selector is-multi is-searchable has-value">
+    <div class="multi-selector-control">
+      <multi-selector-item repeat.for="item of selectedOptions" 
+        item.bind="item" 
+        parent.bind="$parent">  
+      </multi-selector-item>
+      <input ref="dynamicOption"
+        spellcheck="false" 
+        placeholder.bind="placeholder" 
+        keydown.delegate="processKeydown($event)" 
+        autocomplete="on"
+        class="multi-selector-input"
+        list="multi-datalist">
+      <datalist id="multi-datalist">
+        <option repeat.for="word of options">${word}</option>
+      </datalist>
+
+      <span class="multi-selector-clear" 
+        title="Clear all" 
+        aria-label="Clear all" 
+        click.delegate="removeAll($event)">x</span>
+    </div>
+  </div>
+</template>

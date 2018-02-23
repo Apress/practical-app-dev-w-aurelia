@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>apress-localization</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="http://frontendcreator.com/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body aurelia-app="src/main">
+    <h1>Loading...</h1>
+    
+    <script src="https://mattduffield.github.io/rjs-bundle/node_modules/requirejs/require.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/config.js"></script>
+    <script>
+      require.config({
+        paths: {
+          "jQuery": "https://code.jquery.com/jquery-3.2.1.min",
+          "bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
+          "aurelia-fetch-client": "https://mattduffield.github.io/rjs-bundle/node_modules/aurelia-fetch-client/dist/amd/aurelia-fetch-client",
+          "aurelia-i18n": "https://fec.blob.core.windows.net/bundles/aurelia-i18n/2.1.0/aurelia-i18n",
+          "i18next": "https://fec.blob.core.windows.net/bundles/i18next/10.1.0/i18next",
+          "i18next-xhr-backend": "https://fec.blob.core.windows.net/bundles/i18next-xhr-backend/1.5.0/i18next-xhr-backend"
+        },
+        shim: {
+          'bootstrap': ['jQuery'],
+          'aurelia-i18n': ['i18next', 'i18next-xhr-backend']
+        }
+      })
+    </script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/aurelia.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/babel.js"></script>
+    <script>
+      require(['aurelia-bootstrapper']);
+    </script>
+  </body>
+</html>

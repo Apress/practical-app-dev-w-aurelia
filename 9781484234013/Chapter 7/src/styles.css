@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+}
+.users {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: lightgray;
+}
+.users .user {
+  display: flex;
+  flex-flow: column;
+  flex: none;      
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  height: 200px;
+  width: 185px;
+  padding: 10px;
+  margin: 15px;
+  box-shadow: 5px 5px 5px black;
+}
+.users .user img {
+  flex: none;
+  height: 150px;
+  width: 150px;
+}
+.users .user span {
+  flex: none;
+  font-size: large;
+}

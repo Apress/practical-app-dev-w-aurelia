@@ -1,0 +1,7 @@
+<template>
+  <require from="./resources/value-converters/time-ago-value-converter"></require>
+  
+  <h4>
+  last modified ${modifiedDateTime | timeAgo & signal:'time-signal'}
+  </h4>
+</template>
